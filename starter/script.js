@@ -7,6 +7,13 @@ alert ("would you like special characters?")
 var special=confirm
 if (true ('yes'));
 
+console.log(special)
+alert ("would you like lower case letters?")
+var lowerCase=confirm
+if (true ('sorry'));
+console.log(lowerCase)
+
+
 // Array of special characters to be included in password
 var specialCharacters = [
   '@',
