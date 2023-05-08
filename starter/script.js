@@ -1,4 +1,4 @@
-alert ("How many characers?")
+/* alert ("How many characers?")
 var howMany= prompt ("How many characters would you like?")
 alert (howMany)
 
@@ -12,8 +12,7 @@ alert ("would you like lower case letters?")
 var lowerCase=confirm
 if (true ('sorry'));
 console.log(lowerCase)
-
-
+ */
 // Array of special characters to be included in password
 var specialCharacters = [
   '@',
@@ -40,9 +39,19 @@ var specialCharacters = [
   '_',
   '.'
 ];
+prompt ("Would you like special characters?")
+if (specialCharacters!= null){
+
+}
+//else(console.log ("Ok "))
+
 
 // Array of numeric characters to be included in password
 var numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+prompt("Would you like to include numbers?")
+if (numericCharacters != null){
+
+}
 
 // Array of lowercase characters to be included in password
 var lowerCasedCharacters = [
@@ -73,6 +82,8 @@ var lowerCasedCharacters = [
   'y',
   'z'
 ];
+prompt ("Would you like any lowercase letters?")
+if(lowerCasedCharacters)
 
 // Array of uppercase characters to be included in password
 var upperCasedCharacters = [
@@ -104,11 +115,20 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+prompt ("would you like any upper case letters?")
+if(upperCasedCharacters)
+
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-
+var passwordLength= prompt("Please enter desired password lenght between 8-128 characters")
+console.log(passwordLength)
+if (passwordLength <8 || passwordLength > 128){
+  alert ("your password does not meet the critera");
 }
+if (upperCasedCharacters === false && lowerCasedCharacters === false && specialCharacters === false && numericCharacters === false) {
+  return "Your passwords does not meet the password critia";
+  };}
 
 // Function for getting a random element from an array
 function getRandom(arr) {
@@ -126,7 +146,7 @@ function getRandomSymbol() {
 }
 // Function to generate password with user input
 function generatePassword() {
-
+return "test password"
 }
 
 // Get references to the #generate element
