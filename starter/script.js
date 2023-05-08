@@ -104,15 +104,20 @@ if (upperCasedCharacters === false && lowerCasedCharacters === false && specialC
   var upperCasedLetter=prompt("Would you like uppercase character?")
   if (upperCasedCharacters != false, alert("your password should have an uppercase letter")
   );
-  else (prompt ("would you like numbers?"));
-//var upperCasedCharacters = confirm ("your password should have an uppercase letter")
+ // else (prompt ("would you like numbers?"));
+
+  var numericCharacters=prompt("Would you like numbers?")
+  if (numericCharacters != false, alert("your password should have a number")
+  );
+ 
+  var specialCharacters= prompt ("Would you like to include special character?")
 
 
 // Function for getting a random element from an array
-function getRandom(arr) {
-
+function getRandom() {
+return Math.random();
 }
-
+getRandom();
 // Function to generate password with user input
 function generatePassword() {
 return "test password"
