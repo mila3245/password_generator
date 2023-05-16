@@ -115,7 +115,10 @@ if (upperCasedCharacters === false && lowerCasedCharacters === false && specialC
 
 // Function for getting a random element from an array
 function getRandom() {
-return Math.random();
+  const min = 8;
+  const max = 128;
+  const randomPass = Math.floor(Math.random() * max) - min;
+  //return Math.random();
 }
 getRandom();
 // Function to generate password with user input
