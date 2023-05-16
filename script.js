@@ -90,18 +90,20 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
- 
-}
-
 var passwordLength= prompt ("Please enter desired password lenght between 8-128 characters");
  if (passwordLength <8 || passwordLength > 128){
   alert ("your password does not meet the critera");
 }
+var hasSpcChar = confirm ("click ok to confirm including special characters.");
+var hasNumChar = confirm("Click OK to confirm including numeric characters.");
+var hasLowerChar = confirm("Click OK to confirm including lowercase characters.");
+var hasUpperChar = confirm("Click OK to confirm including uppercase characters.");
+
 if (upperCasedCharacters === false && lowerCasedCharacters === false && specialCharacters === false && numericCharacters === false) {
   alert ("Your passwords does not meet the password critia")
   };
 
-  var upperCasedLetter=prompt("Would you like uppercase character?")
+ /* var upperCasedLetter=prompt("Would you like uppercase character?")
   if (upperCasedCharacters != false, alert("your password should have an uppercase letter")
   );
  // else (prompt ("would you like numbers?"));
@@ -111,19 +113,31 @@ if (upperCasedCharacters === false && lowerCasedCharacters === false && specialC
   );
  
   var specialCharacters= prompt ("Would you like to include special character?")
+*/
+var passwordOptions = {
+  length: length,
+  hasSpecialCharacters: hasSpecialCharacters,
+  hasNumericCharacters: hasNumericCharacters,
+  hasLowerCasedCharacters: hasLowerCasedCharacters,
+  hasUpperCasedCharacters: hasUpperCasedCharacters
+};
 
+return passwordOptions;
+console.log( passwordOptions)
+}
 
 // Function for getting a random element from an array
-function getRandom() {
-  const min = 8;
-  const max = 128;
-  const randomPass = Math.floor(Math.random() * max) - min;
-  //return Math.random();
+function getRandom(arr) {
+  var randomPass = Math.floor(Math.random() * arr);
+  var ranEl= arr[randomPass];
+  return ranEl();
 }
 getRandom();
 // Function to generate password with user input
 function generatePassword() {
-return "test password"
+//return "test password"
+var passwordOptions=getPasswordOptions();
+
 }
 
 // Get references to the #generate element
